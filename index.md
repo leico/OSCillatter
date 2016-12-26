@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
+## 制作したエクスターナル
 
-You can use the [editor on GitHub](https://github.com/leico/OSCillatter/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+* ray.twitteroauth
+  * TwitterOAuth認証を行うためのライブラリ
+* ray.OSCiter
+  * 複数のOSCメッセージを含んだ文字列からjson毎に切り出して出力
+    * before
+    ```
+    /aaa/bbb 1 /aaa/aaa 3 /ccc/x 200
+    ```
+    * after
+      * /aaa/bbb 1
+      * /aaa/aaa 3
+      * /ccc/x 200
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 利用ライブラリ
 
-### Markdown
+* [zlib](https://github.com/leico/zlib-xcode)
+    * libz
+* [curl](https://github.com/leico/libcurl-xcode)
+    * libcurl
+* [OpenSSL](https://github.com/leico/openssl-xcode)
+    * libcripto
+    * libssl
+* [libOAuth](https://github.com/leico/liboauth-xcode)
+    * libOAuth
+* [libTwitterOAuth](https://github.com/leico/libTwitterOAuth)
+    * libTwitterOAuth
+* [picojson](https://github.com/kazuho/picojson)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## エクスターナルがエラーになる
 
-```markdown
-Syntax highlighted code block
+### [macOS] Maxを64bitで起動する方法
 
-# Header 1
-## Header 2
-### Header 3
+## Twitter Streaming APIを使うために必要な準備
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/leico/OSCillatter/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## ray って何?
