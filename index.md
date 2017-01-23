@@ -254,6 +254,9 @@ Access Token、Token Secretはページ下部、Create my access Token をクリ
   * OSCメッセージはこうなる
     * `/osc/freq 440 3000`
     * `/osc/gain 0 0 1 2000 0.5 200`
+* userstreamで第三者がパッチを操作するにはどうするの
+  * 操作してくれる方をフォローしましょう
+  * 自分へリプライを送ってもらいましょう
 
 
 #### Maxエクスターナルオブジェクトとは
