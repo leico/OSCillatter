@@ -38,12 +38,12 @@ PHPからC言語のプログラムを[exec](http://php.net/manual/ja/function.ex
 OSCtterのTwitter Streaming API部分をMaxオブジェクトにしたのがray.twitteroauthです。
 
 __これができたら誰でもTwitterでOSCをツイートして遠隔地にあるMaxパッチを、ほぼリアルタイムに制御することができるんですよ。
-アドレスさえ知ってたら会場／配信関係なく観客全員がライブに参加できるんですよ？ すごくないですか？__ 
+アドレスさえ知ってたら会場／配信関係なく観客全員がライブに参加できるんですよ？ 何か専用アプリ入れる必要もなしに。すごくないですか？__ 
 
 というのが製作動機かつ、掲載のお話をいただいた時に推した部分です。
 
 最初は[maxurl](https://docs.cycling74.com/max7/maxobject/maxurl)でできるんじゃないかと思っていました。
-maxurl、ヘルプ見ていただくと分かるのですが、さっき登場したcURLをMaxで使えるようにしたオブジェクトなんですよ。
+maxurl、ヘルプ見ていただくと分かるのですが、さっき登場したcURLをMaxで使えるようにしたオブジェクトということもあって。
 [こんなサンプル](https://cycling74.com/2014/06/09/use-maxurl-to-create-a-realtime-instagram-collage/#.WIYCDZK5yA0)
 ([日本語はこっちが詳しい](http://mirror.boy.jp/?p=1969))
 がアップロードされているし、これでいけんじゃね？　使ったことあるから大体の使い方わかるし。って簡単に考えてました。
