@@ -19,8 +19,42 @@ title: OSCillatter
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ckrZhHWd8f4" frameborder="0" allowfullscreen></iframe>
 
 これが __ray.twitteroauth__ の元です。私の別のプロジェクトで [__ray.sniff~__](https://cycling74.com/project/ray-sniff-record-our-web-field/)
-というのがありまして、それと[Twitter Streaning API](https://dev.twitter.com/streaming/overview)を組み合わせTwitterをベースに様々な情報を利用してみんなで演奏しよう。
-という試みです。動画は試作バージョンのもので HEAD <sup>[1](#1)</sup> はもう少し変化しています。
+というのがありまして、それと[Twitter Streaning API](https://dev.twitter.com/streaming/overview)を組み合わせTwitterをベースに様々な情報を送り合ってみんなで演奏しよう。
+という試みです。動画は途中　バージョンのもので HEAD <sup>[1](#1)</sup> はもう少し変化しています。
+
+この時もTwitter Streaming APIを利用していました。
+Twitterに貼られる画像や[SoundCloud](https://soundcloud.com/)の音源、
+誠に残念ながら[今は亡きVine](https://vine.co/)動画、[gmaps.js](https://hpneo.github.io/gmaps/)による位置情報表示をWebブラウザが担当し、
+OSCでMaxを制御する部分はPHPサーバから[Open Sound Control for PHP](http://opensoundcontrol.org/implementation/open-sound-control-php)
+を利用してMaxにOSCデータを送っていました。
+
+……これHEADの話かもしれません。この動画の時点ではPHPでのTwitter Streaming APIのテストがうまく動かなくて、
+C言語と[cURL](https://curl.haxx.se/)を使った方法では動いていたので、
+PHPからC言語のプログラムを[exec](http://php.net/manual/ja/function.exec.php)
+で呼び出し、出力をPHPで受け取り、OSCはosc.phpでMaxへ送るようにしていた気がします。
+
+#### ray.twitteroauthつくることになってしまった話
+
+OSCtterのTwitter Streaming API部分をMaxオブジェクトにしたのがray.twitteroauthです。
+__これができたら誰でもTwitterでOSCをツイートして遠隔地にあるMaxパッチを、ほぼリアルタイムに制御することができるんですよ。
+アドレスさえ知ってたら会場／配信関係なく観客全員がライブに参加できるんですよ？ すごくないですか？__ 
+
+というのが製作動機かつ、掲載のお話をいただいた時に推した部分です。
+
+最初は[maxurl](https://docs.cycling74.com/max7/maxobject/maxurl)でできるんじゃないかと思っていたんですよ。
+maxurlはさっき登場したcURLをMaxで使えるようにしたオブジェクトなんですよ。
+[こんなサンプル](https://cycling74.com/2014/06/09/use-maxurl-to-create-a-realtime-instagram-collage/#.WIYCDZK5yA0)
+([日本語はこっちが詳しい](http://mirror.boy.jp/?p=1969))
+がアップロードされているし、これでいけんじゃね？　使ったことあるから大体の使い方わかるし。って思ってたんですよ最初。
+
+まー無理でしたね。maxurlが使いにくいのと、[Twitter OAuth](https://dev.twitter.com/oauth)
+突破用[REST API](https://www.amazon.co.jp/dp/4774142042)ヘッダの準備が無理でした。
+
+なので、前回同様いろんなライブラリを引っ張ってきて継ぎ合わせて、
+前回のC言語のプログラムを流用してMaxオブジェクトを作ろうってなったんです。
+
+まー動かないっすわ。
+
 
 ## 制作したエクスターナル
 
