@@ -204,10 +204,10 @@ __この状態でMaxを起動した時32bitのままの場合は、macOSを再�
 
 ![App Description]({{site.github.url}}/images/twitterApps/02_appDescription.png "App Description")
 
-画像の内容を、各々の目的や領域に合わせて記述。利用許諾に同意して`Create your Twitter Application`でアプリケーションを作成。
+画像の内容を、各々の目的や領域に合わせて記述して、利用許諾に同意して`Create your Twitter Application`でアプリケーションを作成します。
 
-作成成功すると作成したアプリの`Details`タブにジャンプする。
-よく他の人と名前被りが発生して作成できない。
+作成成功すると作成したアプリの`Details`タブにジャンプしますが、
+よく他の人と名前被りが発生して作成できないことがあります。
 
 #### 各種キーを取得
 
@@ -218,20 +218,43 @@ __この状態でMaxを起動した時32bitのままの場合は、macOSを再�
 * Access Token
 * Token Secret
 
-の4種類。
+の4種類です。
 
-自分のアカウントのキーに関しては`Keys and Access Tokens`タブで確認、取得が可能。
+自分のアカウントのキーに関しては`Keys and Access Tokens`タブで確認、取得が可能です。
 
 ![API Key and Token]({{site.github.url}}/images/twitterApps/03_apiKeys.png "API Key and Token")
 
-Access Token、Token Secretはページ下部、Create my access Token をクリックすると取得できる。
+Access Token、Token Secretはページ下部、Create my access Token をクリックすると取得できます。
 
 ![Token and Secret]({{site.github.url}}/images/twitterApps/04_token.png "Token and Secret")
 
-以上。
+ここまでで必要なキーが取得できました。
 
 
 ### 役立つかもしれない情報
+
+#### Twitter活用Tips&注意事項
+
+* 1時間に100ツイートまで
+  * 規制かかるよ。資源は大切に
+* 1日の上限目安も1000ツイートまで
+* 同じ内容ex:`/gain 0`を短時間に連続して送れない
+  * いらない情報を加えて回避する
+    * `1 /gain 0`
+    * `2 /gain 0`
+    * `aaa /gain 0`
+    * etc ...
+  * リツイート、引用リツイートを使う
+    * リツイートした内容も反映されるよ
+    * 引用リツイートするとリツイート元に加えて別のOSCが送れるよ
+    * リツイートは取り消せばまたリツイートできるようになるよ
+* 140字以内ならいくつでもOSCメッセージを送れるよ
+  * 同一ツイートの内容は全てほぼ同時に実行されるよ
+* `line~`を駆使するとリニアに変化させることもできる
+  * OSCメッセージはこうなる
+    * `/osc/freq 440 3000`
+    * `/osc/gain 0 0 1 2000 0.5 200`
+
 
 #### Maxエクスターナルオブジェクトとは
 
