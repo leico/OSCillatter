@@ -207,8 +207,36 @@ Access Token、Token Secretはページ下部、Create my access Token をクリ
 以上。
 
 
- 
-### 利用ライブラリ
+### 役立つかもしれない情報
+
+#### Maxエクスターナルオブジェクトとは
+
+連載で既にいくつか出てきてますが、特に解説もなかったと思うので少し紹介します。
+Maxに元から入っているオブジェクトで大抵のことは実現することができます。が、それだけでは実現不可能なことが __まれによく__ あります。
+そういう問題に直面した際、Maxには他のプログラミング言語でオブジェクト制作する機能があるんです。
+
+その機能を使って、個々人が作ったMaxオブジェクト、それがMaxエクスターナルオブジェクトです。
+__パッチではないです__ 。内部は C/C++ 、最近では [FAUST](http://faust.grame.fr/) というものを使って記述されていたり。
+DAWで言うところのAUやVSTのようなものです。Maxパッチと同様、そしてVSTと同様にこちらも世界中で制作され共有されてます。
+
+このオブジェクト、デフォルトのMaxでは実現困難な処理を行うものが数多く存在し、速度も高速ですが、OSやCPUに依存します。
+macOS用はmacOSで、Windows用はWindowsで制作しなければなりません。
+またMaxが32bit版なのか64bit版なのかということも問題になってきます。
+32bit用で64bit用は動きませんし、64bit用で32bit用は動きません。
+
+#### `ray.`って何?
+
+[名前空間](https://ja.wikipedia.org/wiki/%E5%90%8D%E5%89%8D%E7%A9%BA%E9%96%93)として使っています。
+他のエクスターナル製作者とオブジェクト名が被ってしまうとMaxで呼び出せなくなるので、
+自分の製作したオブジェクトには`ray.`を付けています。
+
+インスパイア元はIAMASの[赤松正行](http://akamatsu.org/aka/profile/)教授です。
+
+* [赤松教授が製作したエクスターナル](http://akamatsu.org/aka/max/objects/)
+
+### その他
+
+#### ray.twitteroauth/ray.OSCiter利用ライブラリ
 
 * [zlib](https://github.com/leico/zlib-xcode)
     * libz
@@ -223,9 +251,6 @@ Access Token、Token Secretはページ下部、Create my access Token をクリ
     * libTwitterOAuth
 * [picojson](https://github.com/kazuho/picojson)
 
-
-
-## ray って何?
 
 ---
 
