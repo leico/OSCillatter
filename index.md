@@ -24,6 +24,7 @@ __利用方法等をさっさと知りたい方は読み飛ばして下の方に
   売り上げで収入増えたりしませんが、ちょっと異質なMaxを是非ご覧ください。
   </p>&mdash; leico (@1_0101) <a href="https://twitter.com/1_0101/status/821175657195454465">2017年1月17日</a>
 </blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 何を提供するか/作るか迷いましたが、今回は音じゃなく音周辺を魔改造することにしました。
 やっていることはこの2つです。
