@@ -11,6 +11,8 @@ title: OSCillatter
 
 __利用方法等をさっさと知りたい方は読み飛ばして下の方にあります。__
 
+---
+
 > 何かネタないでしょうか？
 
 とお話がきたからなのですが、それじゃあ味気なさすぎるのでこのコラムの依頼をきっかけになぜエクスターナルを作ったかとか書きます。
@@ -77,7 +79,7 @@ cURLのドキュメント読んで[内部処理を変更](https://curl.haxx.se/l
 ### 制作したエクスターナルの紹介
 
 今回実は２つエクスターナルを作っています。
-
+ざっくり説明すると以下
 
 * ray.twitteroauth
   * TwitterOAuth認証を行うためのオブジェクト
@@ -88,11 +90,28 @@ cURLのドキュメント読んで[内部処理を変更](https://curl.haxx.se/l
     /aaa/bbb 1 /aaa/aaa 3 /ccc/x 200
     ```
     * after
-      * /aaa/bbb 1
-      * /aaa/aaa 3
-      * /ccc/x 200
+      * `/aaa/bbb 1`
+      * `/aaa/aaa 3`
+      * `/ccc/x 200`
 
-## 利用ライブラリ
+### 現状の注意点
+
+#### macOS 64bitのみで動作します。
+
+32bit版、及びWindows版は間に合いませんでした。
+
+#### GETメソッドしか動きません
+
+* [sample.json](https://dev.twitter.com/streaming/reference/get/statuses/sample)
+* [user.json](https://dev.twitter.com/streaming/reference/get/user)
+
+しか対応してないです。自分のタイムラインか全ツイートの1%は取得できますが、
+ハッシュタグや発信地域でフィルタリングすることができません。
+
+### [macOS] Maxを64bitで起動する方法
+
+
+### 利用ライブラリ
 
 * [zlib](https://github.com/leico/zlib-xcode)
     * libz
@@ -109,7 +128,6 @@ cURLのドキュメント読んで[内部処理を変更](https://curl.haxx.se/l
 
 ## エクスターナルがエラーになる
 
-### [macOS] Maxを64bitで起動する方法
 
 ## Twitter Streaming APIを使うために必要な準備
 
