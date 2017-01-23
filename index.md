@@ -110,6 +110,41 @@ cURLのドキュメント読んで[内部処理を変更](https://curl.haxx.se/l
 
 ### [macOS] Maxを64bitで起動する方法
 
+![Maxについて]({{site.github.url}}/images/macOSMaxVersion/00_aboutMax.png "Maxについて")
+ツールバーの`Max -> About Max`でMaxのバージョンが確認できます。
+
+__インストール時の初期設定ではMaxは32bitで動作しています。__
+
+__過去開発されたエクスターナルの多くが32bitのみ対応で放置されているからです。__
+
+__求ム:エクスターナルのコントリビューター__
+
+Maxのバージョンの変更方法です。Finderでアプリケーションフォルダを開き、
+`Max.app`で右クリック、情報を見るを選択します。
+
+![情報を見る]({{site.github.url}}/images/macOSMaxVersion/01_openInfo.png "情報を見る")
+
+`Max.appの情報`ウィンドウ中央辺り、
+
+![Max.appの情報]({{site.github.url}}/images/macOSMaxVersion/02_info.png "Max.appの情報")
+
+- [x] 32ビットモードで開く
+
+となっているので
+
+- [ ] 32ビットモードで開く
+
+と変更します。
+
+__この状態でMaxを起動した時、32bitのままの場合はmacOSを再起動させてみてください。__
+
+これで64bitモードで動作します。
+
+### Twitter Streaming APIを使うために必要な準備
+
+参考
+
+* [Twitter Developersでアプリを作成し、APIキー、アクセストークンを取得する手順](http://wplogs.com/twitter-apps/)
 
 ### 利用ライブラリ
 
@@ -126,10 +161,7 @@ cURLのドキュメント読んで[内部処理を変更](https://curl.haxx.se/l
     * libTwitterOAuth
 * [picojson](https://github.com/kazuho/picojson)
 
-## エクスターナルがエラーになる
 
-
-## Twitter Streaming APIを使うために必要な準備
 
 ## ray って何?
 
