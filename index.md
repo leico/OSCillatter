@@ -111,6 +111,7 @@ cURLのドキュメント読んで[内部処理を変更](https://curl.haxx.se/l
 ### [macOS] Maxを64bitで起動する方法
 
 ![Maxについて]({{site.github.url}}/images/macOSMaxVersion/00_aboutMax.png "Maxについて")
+
 ツールバーの`Max -> About Max`でMaxのバージョンが確認できます。
 
 __インストール時の初期設定ではMaxは32bitで動作しています。__
