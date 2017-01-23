@@ -286,6 +286,15 @@ macOS用はmacOSで、Windows用はWindowsで制作しなければなりませ�
 
 ### その他
 
+#### リポジトリ
+
+最新バージョンはこちら。雑誌刊行時は同一。
+
+* [ray.twitteroauth](https://github.com/leico/ray.twitteroauth)
+* [ray.OSCiter](https://github.com/leico/ray.OSCiter)
+
+__共同開発者募集__
+
 #### ray.twitteroauth/ray.OSCiter利用ライブラリ
 
 * [zlib](https://github.com/leico/zlib-xcode)
