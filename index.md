@@ -9,10 +9,11 @@ title: OSCillatter
 
 ### 制作の経緯
 
+__利用方法等をさっさと知りたい方は読み飛ばして下の方にあります。__
+
 > 何かネタないでしょうか？
 
 とお話がきたからなのですが、それじゃあ味気なさすぎるのでこのコラムの依頼をきっかけになぜエクスターナルを作ったかとか書きます。
-利用方法等をさっさと知りたい方は読み飛ばして下の方にあります。
 
 #### 前身の作品の話
 
@@ -43,7 +44,7 @@ __これができたら誰でもTwitterでOSCをツイートして遠隔地に�
 というのが製作動機かつ、掲載のお話をいただいた時に推した部分です。
 
 最初は[maxurl](https://docs.cycling74.com/max7/maxobject/maxurl)でできるんじゃないかと思っていました。
-maxurl、ヘルプ見ていただくと分かるのですが、さっき登場したcURLをMaxで使えるようにしたオブジェクトということもあって。
+maxurl、ヘルプ見ていただくと分かるのですが、さっき登場したcURLをMaxで使えるようにしたオブジェクトなんです。
 [こんなサンプル](https://cycling74.com/2014/06/09/use-maxurl-to-create-a-realtime-instagram-collage/#.WIYCDZK5yA0)
 ([日本語はこっちが詳しい](http://mirror.boy.jp/?p=1969))
 がアップロードされているし、これでいけんじゃね？　使ったことあるから大体の使い方わかるし。って簡単に考えてました。
@@ -54,13 +55,32 @@ maxurl、ヘルプ見ていただくと分かるのですが、さっき登場�
 なので、前回同様いろんなライブラリを引っ張ってきて継ぎ合わせて、
 前回のC言語のプログラムを流用してMaxオブジェクトを作ろうってなったんです。
 
-まー動かないっすわ。
+### 制作ぐだぐだ話
 
+__ここ飛ばして大丈夫です。__
 
-## 制作したエクスターナル
+まー動かないっすわ。Twitterの仕様が変わったのか、それともライブラリ使い方間違っているのか。
+開発と同時期に[Twitter DevelopperサイトのOAuth Testが落ちてるし](https://twittercommunity.com/t/404-sorry-that-page-does-not-exist-with-button-oauth-test/77056/3)。
+
+あと[libOAuth](https://sourceforge.net/projects/liboauth/)([Github](https://github.com/x42/liboauth))
+の開発が止まっているのか最新の[OpenSSL](https://www.openssl.org/)に対応していない。
+
+他のライブラリならよかったのだけれど、OpenSSLの更新追従できてないのはマズいだろう、
+と思ったのでOpenSSL最新のものに対応した[libOAuth](https://github.com/leico/liboauth)を作ったり。
+
+動くようになってMaxに移植したらMax自体がフリーズして戻ってこなくなり、
+cURLのドキュメント読んで[内部処理を変更](https://curl.haxx.se/libcurl/c/multi-single.html)したり。
+
+そんなことをしていたら原稿の締め切り直前までプログラムが動かないという。
+無事期限内にデータを渡すことができてほんとよかった。
+
+### 制作したエクスターナルの紹介
+
+今回実は２つエクスターナルを作っています。
+
 
 * ray.twitteroauth
-  * TwitterOAuth認証を行うためのライブラリ
+  * TwitterOAuth認証を行うためのオブジェクト
 * ray.OSCiter
   * 複数のOSCメッセージを含んだ文字列からjson毎に切り出して出力
     * before
