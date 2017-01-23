@@ -62,5 +62,5 @@ title: OSCillatter
 
 ---
 
-<a name="1">1</1>
+<a name="1">1</a>
 : git用語で最新のデータのこと。
