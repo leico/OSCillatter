@@ -17,13 +17,31 @@ __利用方法等をさっさと知りたい方は読み飛ばして下の方に
 
 とお話がきたからなのですが、それじゃあ味気なさすぎるのでこのコラムの依頼をきっかけになぜエクスターナルを作ったかとか書きます。
 
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="ja">
+  <p lang="ja" dir="ltr">
+  自分が寄稿している今回のサンプルパッチはちょっと特殊で、音をどのようにハックするかになりがちなプログラミング言語Maxで、<br>
+  既存の枠組みをどのようにハックするかに挑戦し、その一例を提示しています。<br>
+  売り上げで収入増えたりしませんが、ちょっと異質なMaxを是非ご覧ください。
+  </p>&mdash; leico (@1_0101) <a href="https://twitter.com/1_0101/status/821175657195454465">2017年1月17日</a>
+</blockquote>
+
+何を提供するか/作るか迷いましたが、今回は音じゃなく音周辺を魔改造することにしました。
+やっていることはこの2つです。
+
+* できない機能をエクスターナルで実現する
+* 普通思いつかない利用方法で可能性を拡げる
+
+何をどうするかはサンレコのWebか雑誌で確認ください。
+ご覧になってる方の創作や発想のヒントになれば幸いです。
+
+
 #### 前身の作品の話
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ckrZhHWd8f4" frameborder="0" allowfullscreen></iframe>
 
 これが __ray.twitteroauth__ の元です。私の別のプロジェクトで [__ray.sniff~__](https://cycling74.com/project/ray-sniff-record-our-web-field/)
 というのがありまして、それと[Twitter Streaning API](https://dev.twitter.com/streaming/overview)を組み合わせTwitterをベースに様々な情報を送り合ってみんなで演奏しよう。
-という試みです。動画は途中　バージョンのもので HEAD <sup>[1](#1)</sup> はもう少し変化しています。
+という試みです。動画は途中バージョンのものでHEAD<sup>[1](#1)</sup> はもう少し変化しています。
 
 この時もTwitter Streaming APIを利用していました。
 Twitterに貼られる画像や[SoundCloud](https://soundcloud.com/)の音源、
@@ -35,6 +53,11 @@ OSCでMaxを制御する部分はPHPサーバから[Open Sound Control for PHP](
 C言語と[cURL](https://curl.haxx.se/)を使った方法では動いていたので、
 PHPからC言語のプログラムを[exec](http://php.net/manual/ja/function.exec.php)
 で呼び出し、出力をPHPで受け取り、OSCはosc.phpでMaxへ送るようにしていた気がします。
+
+最終的に、__ray.sniff~__ からの通信データの音、SoundCloudの音源、
+Vineのループ音源とループ映像/投稿された画像によるVJ---みんなで寄ってたかって
+行うセッション。全てのデータ共有が映像へ音へ反映され、コミュニケーション即ち音源となり得る場を作り出す試み。
+それがこのプロジェクトです。
 
 #### ray.twitteroauthつくることになってしまった話
 
