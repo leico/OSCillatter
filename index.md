@@ -20,7 +20,7 @@ title: OSCillatter
 
 これが __ray.twitteroauth__ の元です。私の別のプロジェクトで [__ray.sniff~__](https://cycling74.com/project/ray-sniff-record-our-web-field/)
 というのがありまして、それと[Twitter Streaning API](https://dev.twitter.com/streaming/overview)を組み合わせTwitterをベースに様々な情報を利用してみんなで演奏しよう。
-という試みです。動画は試作バージョンのもので HEAD<sup>[1](#1)</sup> はもう少し変化しています。
+という試みです。動画は試作バージョンのもので HEAD <sup>[1](#1)</sup> はもう少し変化しています。
 
 ## 制作したエクスターナル
 
