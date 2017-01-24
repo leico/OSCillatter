@@ -280,7 +280,7 @@ macOS用はmacOSで、Windows用はWindowsで制作しなければなりませ�
 
 Maxのツールバーの`オプション -> ファイル初期設定`を見ると
 
-![ファイル初期設定]({{site.github.url}}/iamges/externalInstall/01_filepreference.png "ファイル初期設定")
+![ファイル初期設定]({{site.github.url}}/images/externalInstall/01_filepreference.png "ファイル初期設定")
 
 `書類/Max 7/Library`にリンクが貼られていることがわかります。
 こちらに例えば`externals`フォルダを作成し、必要なエクスターナルをインストールすると使用可能になります。
@@ -289,7 +289,7 @@ Maxのツールバーの`オプション -> ファイル初期設定`を見る�
 様々なMaxのバージョンが混在している環境の場合、例えば`書類/Max/externals`フォルダを作成し、
 個々のMaxのファイル初期設定で`書類/Max/externals`フォルダを加えると全てのバージョンで利用できるようになります。
 
-![フォルダを加えた状態]({{site.github.url}}/iamges/externalInstall/02_add.png "フォルダを加えた状態")
+![フォルダを加えた状態]({{site.github.url}}/images/externalInstall/02_add.png "フォルダを加えた状態")
 
 この時、右側のSubfoldersを
 
