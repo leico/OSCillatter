@@ -274,6 +274,31 @@ macOS用はmacOSで、Windows用はWindowsで制作しなければなりませ�
 またMaxが32bit版なのか64bit版なのかということも問題になってきます。
 32bit用で64bit用は動きませんし、64bit用で32bit用は動きません。
 
+#### Maxエクスターナルオブジェクトオススメインストール方法
+
+![オプションのファイル初期設定]({{site.github.url}}/images/externalInstall/00_option.png "オプションのファイル初期設定")
+
+Maxのツールバーの`オプション -> ファイル初期設定`を見ると
+
+![ファイル初期設定]({{site.github.url}}/iamges/externalInstall/01_filepreference.png "ファイル初期設定")
+
+`書類/Max 7/Library`にリンクが貼られていることがわかります。
+こちらに例えば`externals`フォルダを作成し、必要なエクスターナルをインストールすると使用可能になります。
+フォルダ名`externals`はわかりやすい名前で大丈夫です。
+
+様々なMaxのバージョンが混在している環境の場合、例えば`書類/Max/externals`フォルダを作成し、
+個々のMaxのファイル初期設定で`書類/Max/externals`フォルダを加えると全てのバージョンで利用できるようになります。
+
+![フォルダを加えた状態]({{site.github.url}}/iamges/externalInstall/02_add.png "フォルダを加えた状態")
+
+この時、右側のSubfoldersを
+
+- [x]
+
+としておくと中にフォルダあった場合、フォルダの中身も検索します。
+
+
+
 #### `ray.`って何?
 
 [名前空間](https://ja.wikipedia.org/wiki/%E5%90%8D%E5%89%8D%E7%A9%BA%E9%96%93)として使っています。
